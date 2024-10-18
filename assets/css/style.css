@@ -3,15 +3,66 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     background-image: url(../img/cork.png);
 }
-
+img{
+    max-width: 100%;
+}
 .app_header {
     background-image: url(../img/wall.png);
     h1{
         padding: 1rem 0;
         text-align: center;
+        font-family: "Sometype Mono", monospace;
     }
 }
 
+.container{
+    width: 80%;
+    margin: auto;
+}
+.row{
+    margin: 1rem -1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.col{
+    width: calc( 100% / 12 * 4);
+    padding: 0 1rem;
+    
+}
+.card{
+    position: relative;
+    padding: 1rem 1rem;
+    background-color: white;
+    transition: rotate .5s, scale .5s;
+    .pin{
+        position: absolute;
+        top: -.8rem;
+        left: 50%;
+        width: 30px;
+        transform: translate(-50%);
+
+    }
+    .imag_card{
+        max-width: 100%;
+        height: 200px;
+        background-color: palegreen;
+    }
+    .card_body{
+        height: 50px;
+        font-family: "Edu TAS Beginner", sans-serif, cursive;
+    }
+}
+@keyframes rotate{
+
+}
+.card:hover{
+    rotate: 15deg;
+    scale: 1.2;
+    .pin{
+        display: none;
+    }
+}
