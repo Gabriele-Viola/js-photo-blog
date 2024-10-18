@@ -57,6 +57,7 @@ img{
     background-color: white;
     transition: rotate .5s, scale .5s;
     height: 100%;
+    box-shadow: 1px 1px 10px;
         
     .pin{
         position: absolute;
