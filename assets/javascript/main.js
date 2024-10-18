@@ -10,7 +10,7 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
     photos.forEach( photo => {
         const {album, id, title, url} = photo        
         
-        photoCols += markUp(url, id)
+        photoCols += markUp(url, title)
     });
       insertMarkup(rowEl, photoCols)
 })
