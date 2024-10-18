@@ -12,8 +12,7 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
         
         photoCols += markUp(url, id)
     });
-    rowEl.innerHTML = photoCols
-      
+      insertMarkup(rowEl, photoCols)
 })
 
 
@@ -36,4 +35,8 @@ function markUp(url, title) {
 <!-- /.col -->
 `
     return markup
+}
+function insertMarkup(where, what) {
+   return where.innerHTML = what
+    
 }
