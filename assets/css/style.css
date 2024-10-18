@@ -57,8 +57,7 @@ img{
     background-color: white;
     transition: rotate .5s, scale .5s;
     height: 100%;
-    margin: 1rem 0;
-    
+        
     .pin{
         position: absolute;
         top: -.8rem;
@@ -69,7 +68,7 @@ img{
     }
 
     .card_body{
-        padding: .5rem 0;
+        padding-top: .5rem 0;
         font-family: "Edu TAS Beginner", sans-serif, cursive;
     }
 }
@@ -83,3 +82,4 @@ img{
         display: none;
     }
 }
+
