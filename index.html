@@ -17,12 +17,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js" integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Photo Blog</title>
 </head>
-<body class="debug">
+<body class="debug overflow">
     <div class="app_header">
         <h1>ESTATE '24</h1>
     </div>
     <!-- /.app_header -->
     <div class="app_main">
+        <div class="overlay d-none">
+          <div class="focus-container">
+              <div class="focus-card">
+                  <div class="focus-img">
+                    <!-- there your img -->
+                      <img src="" alt="">
+                  </div>
+                  <!-- /.focus-img -->
+                   <div class="focus-card-body">
+                      <!-- There your photo title -->
+                   </div>
+                   <!-- /.focus-card-body -->
+                  <div class="focus-close">
+                      <button>Close</button>
+                  </div>
+                  <!-- /.focus-close -->
+              </div>
+              <!-- /.focus-card -->
+          </div>
+          <!-- /.focus-container -->
+        </div>
         <div class="container">
             <div class="row">
 
@@ -33,26 +54,6 @@
     </div>
     <!-- /.app_main -->
     <div class="app_footer">
-      <div class="overlay d-none">
-        <div class="focus-container">
-            <div class="focus-card">
-                <div class="focus-img">
-                    <img src="${url}" alt="">immagine
-                </div>
-                <!-- /.focus-img -->
-                 <div class="focus-card-body">
-                    title
-                 </div>
-                 <!-- /.focus-card-body -->
-                <div class="focus-close">
-                    <button>Close</button>
-                </div>
-                <!-- /.focus-close -->
-            </div>
-            <!-- /.focus-card -->
-        </div>
-        <!-- /.focus-container -->
-      </div>
     </div>
     <!-- /.app_footer -->
     <script src="./assets/javascript/main.js"></script>
