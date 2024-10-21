@@ -4,15 +4,62 @@
     box-sizing: border-box;
 }
 
-body{
+.d-none {
+    display: none;
+}
+.d-block{
+    display: block;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.focus-container {
+    width: 80%;
+    margin: auto;
+}
+
+.focus-card {
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+.focus-img {
+    background-color: red;
+}
+
+.focus-card-body {
+    padding: 1rem 0;
+    font-family: "Edu TAS Beginner", sans-serif, cursive;
+    background-color: green;
+}
+
+.focus-close {
+    padding-top: 1rem;
+    text-align: center;
+    font-family: "Sometype Mono", monospace;
+}
+
+body {
     background-image: url(../img/cork.png);
 }
-img{
+
+img {
     max-width: 100%;
 }
+
 .app_header {
     background-image: url(../img/wall.png);
-    h1{
+
+    h1 {
         padding: 1rem 0;
         font-size: 4rem;
         text-align: center;
@@ -21,45 +68,54 @@ img{
     }
 }
 
-.container{
+.container {
     width: 90%;
     margin: auto;
-    @media screen and (min-width: 768px){ 
+
+    @media screen and (min-width: 768px) {
         width: 80%;
     }
-    @media screen and (min-width: 1024px){ 
+
+    @media screen and (min-width: 1024px) {
         width: 70%;
     }
-    @media screen and (min-width: 1440px){ 
+
+    @media screen and (min-width: 1440px) {
         width: 60%;
     }
 }
-.row{
+
+.row {
     margin: 1rem -1rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem 0;
 }
-.col{
-    width: calc( 100% / 12 * 9);
+
+.col {
+    width: calc(100% / 12 * 9);
     padding: 0 1rem;
-    @media screen and (min-width: 768px){ 
-        width: calc( 100% / 12 * 6);
+
+    @media screen and (min-width: 768px) {
+        width: calc(100% / 12 * 6);
     }
-    @media screen and (min-width: 1024px){ 
-        width: calc( 100% / 12 * 4);
+
+    @media screen and (min-width: 1024px) {
+        width: calc(100% / 12 * 4);
     }
 }
-.card{
+
+.card {
     position: relative;
     padding: 1rem 1rem;
     background-color: white;
     transition: rotate .5s, scale .5s;
     height: 100%;
     box-shadow: 1px 1px 10px;
-        
-    .pin{
+    cursor: pointer;
+
+    .pin {
         position: absolute;
         top: -.8rem;
         left: 50%;
@@ -68,19 +124,20 @@ img{
 
     }
 
-    .card_body{
+    .card_body {
         padding-top: .5rem 0;
         font-family: "Edu TAS Beginner", sans-serif, cursive;
     }
 }
 
 
-.card:hover{
+.card:hover {
     rotate: 15deg;
     scale: 1.2;
     z-index: 100;
-    .pin{
+    box-shadow: 1px 1px 20px;
+
+    .pin {
         display: none;
     }
 }
-
