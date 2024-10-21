@@ -48,7 +48,7 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
             cardEl.addEventListener('click', function () {
                 console.log('work');
                 overlayEl.classList.remove('d-none')
-                bodyEl.classList.add('overflow')
+                
                 focusImgEl.src = imgElArr[i-1].src
                 focusCardEl.innerText = titleElArr[i-1]
             })
@@ -95,7 +95,7 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
 
         closeEl.addEventListener('click', function () {
             overlayEl.classList.add('d-none')
-            bodyEl.classList.remove('overflow')
+            
 
         })
 

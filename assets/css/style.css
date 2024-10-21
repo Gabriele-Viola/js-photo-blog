@@ -10,9 +10,7 @@
 .d-block{
     display: block;
 }
-.overflow{
-    overflow: hidden;
-}
+
 .overlay {
     position: fixed;
     top: 0;
