@@ -19,22 +19,38 @@
     background-color: rgba(0, 0, 0, 0.5);
     height: 100vh;
     width: 100%;
-
     z-index: 1000;
 }
 
 .focus-container {
-    width: 80%;
+    width: 90%;
     margin: 1rem auto;
     padding: 1rem 0;
+    @media screen and (min-width: 768px) {
+        width: 80%;
+    }
+
+    @media screen and (min-width: 1024px) {
+        width: 70%;
+    }
+
+    @media screen and (min-width: 1440px) {
+        width: 60%;
+    }
 }
 
 .focus-card {
     background-color: white;
-    width: 60%;
+    width: 100%;
     margin: auto;
     padding: 1rem;
-  
+
+    @media screen and (min-width: 1024px) {
+        width: 45%;
+    }
+    @media screen and (min-width: 1440px) {
+        width: 40%;
+    }
 }
 
 .focus-img {
