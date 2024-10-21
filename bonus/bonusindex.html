@@ -14,10 +14,10 @@
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- css style -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/bonusstyle.css">
     <!-- axios -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js" integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <title>Photo Blog</title>
+    <title>Photo Blog Bonus</title>
 </head>
 <body class="debug">
     <div class="app_header">
@@ -27,30 +27,46 @@
     <div class="app_main">
         <div class="overlay d-none">
           <div class="focus-container">
-            <div class="prev">
-                
-            </div>
-            <!-- ./prev -->
-              <div class="focus-card">
-                  <div class="focus-img">
-                    <!-- there your img -->
-                      <img src="" alt="">
-                  </div>
-                  <!-- /.focus-img -->
-                   <div class="focus-card-body">
-                      <!-- There your photo title -->
-                   </div>
-                   <!-- /.focus-card-body -->
-                   <!-- /.focus-close -->
+            <div class="row">
+              <div class="col">
+                <div class="prev">
+                  <i class="fa-solid fa-caret-left"></i>
                 </div>
-                <div class="focus-close">
-                    <button>Close</button>
-                </div>
-              <!-- /.focus-card -->
-               <div class="next">
+                <!-- ./prev -->
 
-               </div>
-               <!-- /.next -->
+              </div>
+              <!-- /.col -->
+              <div class="col">
+                <div class="focus-card">
+                    <div class="focus-img">
+                      <!-- there your img -->
+                        <img src="" alt="">
+                    </div>
+                    <!-- /.focus-img -->
+                     <div class="focus-card-body">
+                        <!-- There your photo title -->
+                     </div>
+                     <!-- /.focus-card-body -->
+                     <!-- /.focus-close -->
+                  </div>
+                  <div class="focus-close">
+                      <button>Close</button>
+                  </div>
+                <!-- /.focus-card -->
+
+              </div>
+              <!-- /.col -->
+              <div class="col">
+                <div class="next">
+                 <i class="fa-solid fa-caret-right"></i>
+                </div>
+                <!-- /.next -->
+
+              </div>
+              <!-- /.col -->
+
+            </div>
+            <!-- ./row -->
           </div>
           <!-- /.focus-container -->
         </div>
@@ -67,7 +83,7 @@
     <div class="app_footer">
     </div>
     <!-- /.app_footer -->
-    <script src="./assets/javascript/main.js"></script>
+    <script src="./assets/javascript/bonusmain.js"></script>
 </body>
 </html>
 
