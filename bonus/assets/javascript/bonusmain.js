@@ -50,15 +50,45 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
 
             imgElArr.push(imgEl)
             titleElArr.push(titleEl)
-
+            
+            let select = i
+            let reset = 0
             cardEl.addEventListener('click', function () {
+                focusClick(focusImgEl, focusCardEl, select, imgElArr, titleElArr )
 
-                overlayEl.classList.remove('d-none')
-
-                focusImgEl.src = imgElArr[i - 1].src
-                focusCardEl.innerText = titleElArr[i - 1]
+                nextEl.addEventListener('click', function () {
+                       if (select < count) {
+                           select ++
+                           console.log(select, count);
+                           
+                           
+                           focusClick(focusImgEl, focusCardEl, select, imgElArr, titleElArr )
+                        
+                       }  else {
+                        select = i
+                        focusClick(focusImgEl, focusCardEl, select, imgElArr, titleElArr )
+                       }                        
+                    
+                    
+                })
+                prevEl.addEventListener('click',function () {
+                    if (select > count) {
+                        select --
+                        console.log(select, count);
+                        
+                        
+                        focusClick(focusImgEl, focusCardEl, select, imgElArr, titleElArr )
+                     
+                    }  else {
+                     select = i
+                     focusClick(focusImgEl, focusCardEl, select, imgElArr, titleElArr )
+                    }                        
+                 
+                    
+                } )
+                
+                
             })
-
         }
 
         closeEl.addEventListener('click', function () {
@@ -69,7 +99,12 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
 
     })
 
+function focusClick(focusImgEl, focusCardEl, select, imgElArr, titleElArr ) {
+    overlayEl.classList.remove('d-none')
 
+    focusImgEl.src = imgElArr[select - 1].src
+    focusCardEl.innerText = titleElArr[select - 1]
+}
 
 function markUp(url, title, id) {
 

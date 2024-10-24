@@ -19,9 +19,11 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
         let cardEl, imgEl, titleEl
         let fixedText
 
-        photos.forEach(photo => {
+        photos.forEach((photo, index) => {
 
             const { album, id, title, url } = photo
+            console.log(index);
+            
             count++
             console.log(title);
             fixedText = title.substring(0, 1).toUpperCase() + title.substring(1).toLowerCase()
@@ -35,27 +37,44 @@ axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
 
         insertMarkup(rowEl, photoCols)
 
-        let imgElArr = []
-        let titleElArr = []
+        // let imgElArr = []
+        // let titleElArr = []
 
-        for (let i = 1; i <= count; i++) {
-
-            cardEl = rowEl.querySelector(`#is${i}`)
-            imgEl = document.getElementById(`img${i}`)
-            titleEl = document.getElementById(`title${i}`).innerText
-
-            imgElArr.push(imgEl)
-            titleElArr.push(titleEl)
-
-            cardEl.addEventListener('click', function () {
-
+        const allCardEl = rowEl.querySelectorAll('.col')
+        
+         allCardEl.forEach(Card =>{
+            Card.addEventListener('click', function(){
+                console.log(Card);
+                
                 overlayEl.classList.remove('d-none')
-
-                focusImgEl.src = imgElArr[i - 1].src
-                focusCardEl.innerText = titleElArr[i - 1]
+                console.log(focusImgEl.src);
+                const imgCard = Card.querySelector('#img')
+                focusImgEl.src = imgCard.src
+                const titleCard = Card.querySelector('#title')
+                
+                 focusCardEl.innerText = titleCard.innerText
             })
+         })
+        
 
-        }
+        // for (let i = 1; i <= count; i++) {
+
+        //     cardEl = rowEl.querySelector(`#is${i}`)
+        //     imgEl = document.getElementById(`img${i}`)
+        //     titleEl = document.getElementById(`title${i}`).innerText
+
+        //     imgElArr.push(imgEl)
+        //     titleElArr.push(titleEl)
+
+        //     cardEl.addEventListener('click', function () {
+
+        //         overlayEl.classList.remove('d-none')
+
+        //         focusImgEl.src = imgElArr[i - 1].src
+        //         focusCardEl.innerText = titleElArr[i - 1]
+        //     })
+
+        // }
 
         closeEl.addEventListener('click', function () {
             overlayEl.classList.add('d-none')
@@ -74,10 +93,10 @@ function markUp(url, title, id) {
 <div id="is${id}" class="card photo${id}">
     <img class="pin" src="./assets/img/pin.svg" alt="">
     <div class="imag_card">
-        <img id="img${id}" src="${url}" alt="">
+        <img id="img" src="${url}" alt="">
         </div>
     <!-- /.imag_card -->
-    <div id="title${id}" class="card_body">
+    <div id="title" class="card_body">
         ${title}
         </div>
         <!-- /.card_body -->
